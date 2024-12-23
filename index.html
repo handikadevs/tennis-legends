@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tennis Legends</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Trade+Winds|Gloria+Hallelujah|Share+Tech" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<body>
+    <div id="welcome-screen" class="welcome">
+        <div class="center">
+            <h1 class="dramatic-text">Tennis Legends :</h1>
+            <p class="creator">Smash, Spin, Dominate!</p>
+            <div id="mode-options">
+                <p>Choose mode :</p>
+                <!-- Pilih jenis permainan -->
+                <button onclick="chooseMode('ai')">VS AI</button>
+                <button onclick="chooseMode('multiplayer')">Multiplayer</button>
+                <br>
+                <button class="setting" onclick="showSetting()">Setting</button>
+            </div>
+            
+            <!-- Pilihan tingkat kesulitan -->
+            <div id="difficulty-options" style="display: none;">
+                <p>Choose difficulty :</p>
+                <button onclick="startGame('easy')">Easy</button>
+                <button onclick="startGame('medium')">Normal</button>
+                <button onclick="startGame('hard')">Hard</button>
+            </div>
+
+             <!-- Pilihan setting -->
+             <div id="setting-menu" style="display: none;">
+                <button class="setting" onclick="menu()">Back</button>
+                <table style="border-collapse: collapse; text-align: left; justify-content: center; display: flex;">
+                    <tr>
+                        <td><label for="up-key">Move Up (Player 1)</label></td>
+                        <td><span style="margin: 5px;"> : </span></td>
+                        <td><span id="up-key">Q</span></td>
+                        <td><button style="margin-left: 50px;" onclick="changeKey('up')">Change</button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="down-key">Move Down (Player 1)</label></td>
+                        <td><span style="margin: 5px;"> : </span></td>
+                        <td><span id="down-key">A</span></td>
+                        <td><button style="margin-left: 50px;" onclick="changeKey('down')">Change</button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="up-key2">Move Up (Player 2)</label></td>
+                        <td><span style="margin: 5px;"> : </span></td>
+                        <td><span id="up-key2">O</span></td>
+                        <td><button style="margin-left: 50px;" onclick="changeKey('up2')">Change</button></td>
+                    </tr>
+                    <tr>
+                        <td><label for="down-key2">Move Down (Player 2)</label></td>
+                        <td><span style="margin: 5px;"> : </span></td>
+                        <td><span id="down-key2">L</span></td>
+                        <td><button style="margin-left: 50px;" onclick="changeKey('down2')">Change</button></td>
+                    </tr>
+                </table>
+                <br>
+                <button onclick="saveSettings()">Save</button>
+            </div>
+        </div>
+    </div>
+    <canvas id="game" width="800" height="480"></canvas>
+    <div id="mobile-controls" style="display: none;">
+        <button class="mobile-button" id="move-up">↑</button>
+        <button class="mobile-button" id="move-down">↓</button>
+    </div>
+    <div id="mobile-controls-player2" style="display: none;">
+        <button class="mobile-button" id="move-up2">↑</button>
+        <button class="mobile-button" id="move-down2">↓</button>
+    </div>
+    <div id="winner-message" class="won" style="display: none;">
+        <div class="center">
+            <h1 id="winner-text">YOU WON!</h1>
+            <p class="floating replay bold"  onclick="showWelcomeScreen()">Play Again</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
