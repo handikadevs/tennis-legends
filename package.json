@@ -1,0 +1,14 @@
+{
+  "name": "tennis-legends",
+  "version": "1.0.0",
+  "description": "Tennis Legends game",
+  "main": "index.html",
+  "scripts": {
+    "deploy": "gh-pages -d ." 
+  },
+  "homepage": "https://handikadevs.github.io/tennis-legends", 
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "serve": "^11.3.2" 
+  }
+}
