@@ -40,7 +40,7 @@ Try to score by getting the ball past the opponent’s paddle. The first player 
 This project was created by:
 
 - Handikadevs (https://github.com/handikadevs) - Project Developer
-- Vinz (https://instagram.com/vinozzz) - Project Developer
+- Vinz (https://instagram.com/ardsyah_glh) - Project Developer
 - Iconography and assets: [Icons8](https://icons8.com)
 - Studio Griya Karya Digital (https://studio.griyakarya.my.id) Copyright 2024
 ## License
